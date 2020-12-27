@@ -6,6 +6,99 @@
 
 ----------------------------------
 
+## Topologi Soal Pada Modul 5
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792730817842642964/Topologi_A.JPG">
+
+### A
+
+- Lakukan konfigurasi setup topologi UML seperti pada gambar dibawah ini.
+
+```
+# Switch
+uml_switch -unix switch0 > /dev/null < /dev/null &
+uml_switch -unix switch1 > /dev/null < /dev/null &
+uml_switch -unix switch2 > /dev/null < /dev/null &
+uml_switch -unix switch3 > /dev/null < /dev/null &
+uml_switch -unix switch4 > /dev/null < /dev/null &
+uml_switch -unix switch5 > /dev/null < /dev/null &
+
+# Router
+xterm -T SURABAYA -e linux ubd0=SURABAYA,jarkom umid=SURABAYA eth0=tuntap,,,10.151.76.88 eth1=daemon,,,switch3 eth2=daemon,,,switch2 mem=96M &
+xterm -T KEDIRI -e linux ubd0=KEDIRI,jarkom umid KEDIRI eth0=daemon,,,switch3 eth1=daemon,,,switch4 eth2=daemon,,,seitch5 mem=96M &
+xterm -T BATU -e linux ubd0=BATU,jarkom umid BATU eth0=daemon,,,switch2 eth1=daemon,,,switch1 eth2=daemon,,,switch0 mem=96M &
+
+# Server
+xterm -T MALANG -e linux ubd0=MALANG,jarkom umid=MALANG eth0=daemon,,,switch0 mem=128M &
+xterm -T MOJOKERTO -e linux ubd0=MOJOKERTO,jarkom umid=MOJOKERTO eth0=daemon,,,switch0 mem=128M &
+xterm -T MADIUN -e linux ubd0=MADIUN,jarkom umid=MADIUN eth0=daemon,,,switch5 mem=128M &
+xterm -T PROBOLINGGO -e linux ubd0=PROBOLINGGO,jarkom umid=PROBOLINGGO eth0=daemon,,,switch5 mem=128M &
+
+# Klien
+xterm -T SIDOARJO -e linux ubd0=SIDOARJO,jarkom umid=SIDOARJO eth0=daemon,,,switch1 mem=96M &
+xterm -T GRESIK -e linux ubd0=GRESIK,jarkom umid=GRESIK eth0=daemon,,,switch4 mem=96M &
+```
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792735718702186526/Setup_Topologi_UML.JPG" width="800" height="400">
+
+- Kemudian lakukan konfigurasi interfaces pada UML BATU, GRESIK, KEDIRI, MADIUN, MALANG, MOJOKERTO, PROBOLINGGO, SIDOARJO, dan SURABAYA sepeti pada gambar dibawah ini.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792736484708712459/A._Setting_Batu.JPG" width="500" height="400">
+<br />
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792736804380999700/A._Setting_Gresik.JPG" width="500" height="400">
+<br />
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792737548035162122/A._Setting_Kediri.JPG" width="500" height="400">
+<br />
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792737610082156564/A._Setting_Madiun.JPG" width="500" height="400">
+<br />
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792737670228344852/A._Setting_Malang.JPG" width="500" height="400">
+<br />
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792737734548652032/A._Setting_Mojokerto.JPG" width="500" height="400">
+<br />
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792737793381367808/A._Setting_Probolinggo.JPG" width="500" height="400">
+<br />
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792737843179946005/A._Setting_Sidoarjo.JPG" width="500" height="400">
+<br />
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792737893193744394/A._Setting_Surabaya.JPG" width="500" height="400">
+
+### B
+
+- Berikut merupakan pembagian menggunakan metode CIDR untuk perhitungan IP pada pohon CIDR (Tree CIDR).
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792738225264656454/B._Pembagian_CIDR.png">
+
+- Berikut merupakan perhitungan pohon untuk pembagian IP dengan menggunakan metode CIDR.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792738268801400832/B._Tree_CIDR.JPG">
+
+- Berikut merupakan pembagian IP yang sudah disesuaikan dengan lingkaran topologi dan perhitungan dari tree CIDR.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792738248912928778/B._Pembagian_IP_setelah_pembuatan_tree.JPG">
+
+### C
+
+- Lakukan konfigurasi untuk routing pada SURABAYA seperti pada gambar dibawah ini.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792739245210730516/C.1_Routing_Surabaya.JPG" width="400" height="500">
+
+- Berikut merupakan hasil routing SURABAYA.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792739526656393216/C.2_Routing_surabaya_berhasil.JPG" width="400" height="500">
+
+- Kemudian lakukan konfigurasi untuk routing pada KEDIRI seperti pada gambar dibawah ini.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792739715530358804/C.3_Routing_Kediri.JPG" width="500" height="400">
+
+- Berikut merupakan hasil routing KEDIRI.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792739736145100840/C.4_Routing_Kediri_berhasil.JPG" width="500" height="400">
+
+- Berikut merupakan hasil ping untuk semua routing.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792740387143417906/C.5_berhasil_ping_untuk_semua_routing.JPG" width="800" height="400">
+
+
+
 ### Soal 1 
 ### Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi SURABAYA menggunakan iptables, namun Bibah tidak ingin kalian menggunakan MASQUERADE.
 
