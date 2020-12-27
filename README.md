@@ -30,15 +30,15 @@
 
 - Berikut merupakan hasil blok kiriman SSH dari luar (putty) ke malang (port 22). 
 
-<img src="https://cdn.discordapp.com/attachments/777146787336290354/792654535360249856/2.4_berhasil_memblok_kiriman_ssh_dari_luar_putty_ke_malang_port22.JPG" width="600" height="400">
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792654535360249856/2.4_berhasil_memblok_kiriman_ssh_dari_luar_putty_ke_malang_port22.JPG" width="800" height="400">
 
 - Berikut merupakan hasil blok kiriman SSH dari SIDOARJO ke MALANG.
 
-<img src="https://cdn.discordapp.com/attachments/777146787336290354/792655117169721404/2.4_berhasil_memblok_kiriman_ssh_dari_sidoarjo_ke_malang_port22.JPG" width="600" height="400">
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792655117169721404/2.4_berhasil_memblok_kiriman_ssh_dari_sidoarjo_ke_malang_port22.JPG" width="800" height="400">
 
 - Berikut merupakan hasil blok kiriman SSH dari luar (putty) ke MOJOKERTO (port 22).
 
-<img src="https://cdn.discordapp.com/attachments/777146787336290354/792656289464582144/2.5_berhasil_memblok_kiriman_ssh_dari_luar_putty_ke_mojokerto_port22.JPG" width="600" height="400">
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792656289464582144/2.5_berhasil_memblok_kiriman_ssh_dari_luar_putty_ke_mojokerto_port22.JPG" width="800" height="400">
 
 ### Soal 3
 ### Karena tim kalian maksimal terdiri dari 3 orang, Bibah meminta kalian untuk membatasi DHCP dan DNS server hanya boleh menerima maksimal 3 koneksi ICMP secara bersamaan yang berasal dari mana saja menggunakan iptables pada masing masing server, selebihnya akan di DROP.
