@@ -51,8 +51,26 @@
 
 <img src="https://cdn.discordapp.com/attachments/777146787336290354/792659623843725322/3.1_berhasil_ping_pada_madiun_probolinggo_sidoarjo_dan_gagal_pada_gresik_dibatasi_3.JPG" width="500" height="500">
 
-### Soal 4
-### Akses dari subnet SIDOARJO hanya diperbolehkan pada pukul 07.00 - 17.00 pada hari Senin sampai Jumat.
+### Soal 5
+### Akses dari subnet GRESIK hanya diperbolehkan pada pukul 17.00 hingga pukul 07.00 setiap harinya. Selain itu paket akan di REJECT.
+
+- Lakukan konfigurasi iptables MALANG pada subnet GRESIK dengan syntax ``iptables -A INPUT -s 192.168.0.0/24 -m time --timestart 09.01 --timestop 16.59 -j reject``
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792724934387826698/5.1_setup_iptables_malang_pada_subnet_gresik.JPG" width="500" height="400">
+
+- Berikut merupakan percobaan netcat pada MALANG dari GRESIK di waktu yang tidak diperbolehkan dan gagal.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792725463314464788/5.2_percobaan_netcat_pada_malang_dari_gresik_diwaktu_yang_tidak_diperbolehkan_dan_gagal.JPG" width="800" height="400">
+
+- Kemudian lakukan konfigurasi penggantian waktu MALANG di waktu yang diperbolehkan.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792725905474322453/5.3_mengganti_waktu_malang_di_waktu_yang_diperbolehkan.JPG" width="500" height="400">
+
+- Berikut merupakan hasil dari mengirimkan pesan dari GRESIK ke MALANG di waktu yang diperbolehkan.
+
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792726238036623370/5.4_berhasil_mengirimkan_pesan_dari_gresik_ke_malang_diwaktu_yang_diperbolehkan.JPG" width="800" height="400">
+
+
 
 
 
