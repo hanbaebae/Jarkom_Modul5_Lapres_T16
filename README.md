@@ -22,11 +22,11 @@
 
 - Melakukan konfigurasi iptables pada SURABAYA dengan syntax ``iptables -A FORWARD -p tcp --dport 22 -d 10.151.77.176/29 -i eth0 -j DROP``.
 
-<img src="https://cdn.discordapp.com/attachments/777146787336290354/792646769724620800/2.1_setting_iptables_pada_surabaya.JPG" width="500" height="400">
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792646769724620800/2.1_setting_iptables_pada_surabaya.JPG" width="600" height="400">
 
 - Kemudian lakukan pengintsallan netcat pada MOJOKERTO dan MALANG dengan command ``apt-get install netcat``.
 
-<img src="https://cdn.discordapp.com/attachments/777146787336290354/792647357215932446/2.2_install_netcat_pada_mojokerto_dan_malang.JPG" width="500" height="400">
+<img src="https://cdn.discordapp.com/attachments/777146787336290354/792647357215932446/2.2_install_netcat_pada_mojokerto_dan_malang.JPG" width="600" height="400">
 
 - Berikut merupakan hasil blok kiriman SSH dari luar (putty) ke malang (port 22). 
 
