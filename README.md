@@ -162,13 +162,3 @@ xterm -T GRESIK -e linux ubd0=GRESIK,jarkom umid=GRESIK eth0=daemon,,,switch4 me
 - Berikut merupakan hasil dari mengirimkan pesan dari GRESIK ke MALANG di waktu yang diperbolehkan.
 
 <img src="https://cdn.discordapp.com/attachments/777146787336290354/792726238036623370/5.4_berhasil_mengirimkan_pesan_dari_gresik_ke_malang_diwaktu_yang_diperbolehkan.JPG" width="800" height="400">
-
-
-
-
-
-
-
-
-
-
